@@ -1,0 +1,29 @@
+.blockButton {
+    
+    align-items: center;
+    justify-content: end;
+    text-align:right ;
+    width: 50%;
+}
+
+.heroButton {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: rgb(236, 234, 234);
+}
+
+.titleButton {
+    width: 50%;
+    text-align: start;
+}
+
+.titleButton h1 {
+    font-size: 25px;
+}
+
+.container_pages {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}

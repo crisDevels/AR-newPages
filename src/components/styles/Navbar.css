@@ -1,0 +1,27 @@
+
+.footer {
+  background: rgb(240, 239, 239);
+  display: block;
+  margin: 0;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  justify-content: center; 
+  height: 40vh; 
+}
+
+.socialMedia {
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+}
+
+.iconContact {
+  margin: 0 10px;
+}
+
+.arroba {
+ width: 100%;
+ display: block;
+}
+

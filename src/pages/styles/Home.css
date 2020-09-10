@@ -1,0 +1,36 @@
+.col1{
+  width: 50%;
+  text-align: right;
+}
+
+.col1 img {
+  width: 200px;
+  margin-left: 500px;
+}
+
+
+.col1 h1 {
+  font-size: 50px;
+  text-align: right;
+}
+
+.col2 img {
+  width: 500px;
+}
+
+.FlexHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -5px;
+  height: 100%;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .Home__col {
+    align-items: flex-start;
+  }
+}

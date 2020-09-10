@@ -1,0 +1,41 @@
+.containerForm {
+    display: block;
+    padding: 20px;
+    text-align: left;
+    border-radius: 20px;
+    width: 300px;
+    background: rgb(240, 239, 239);
+    box-shadow: 0 4px 8px 0 #00000077;
+}
+
+.formSpace {
+    width: 270px;
+    border-style: solid;
+    margin: 10px 0 25px 0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formSpaceDescription {
+    width: 270px;
+    border-style: solid;
+    margin: 10px 0 0px 0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit {
+    background: rgb(255, 187, 0);
+    padding: 10px 20px;
+    border-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.etiqueta {
+    font-family: 'Montserrat', sans-serif; 
+}
