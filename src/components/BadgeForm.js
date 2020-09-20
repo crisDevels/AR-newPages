@@ -3,38 +3,10 @@ import React from 'react';
 import './styles/stylesForm.css'
 
 class BadgeForm extends React.Component {
-  state = {
-    // nombreMarca: "iobbu",
-    // nombreProducto: "Servicio web para marca",
-    // precioProducto: "$50.000",
-    // descripcionProducto: "rapido, seguro, independiente"
-  }
-  handleClick = e => {
-    console.log('Button was clicked');
-  };
-
-  //handleSubmit = e => {
-  //  e.preventDefault();
-  //  console.log('Form was submitted');
-  //  console.log(this.state);
-  //};
-
-  // props.onChange = (e) => {
-  //   console.log({
-  //     // className: e.target.className,
-  //     // name: e.target.name,
-  //     // value: e.target.value
-  //   });
-  //   this.setState({
-  //     [e.target.name]: e.target.value,
-  //   })
-  // }
 
   render() {
     return (
       <div>
-        <h1>Mira tu pagina con Realidad Aumentada</h1>
-
         <form className="containerForm" onSubmit={this.props.onSubmit}>
           <label className="etiqueta">Nombre de tu marca o empresa</label>
           <input 
@@ -63,18 +35,28 @@ class BadgeForm extends React.Component {
           placeholder="Precio del producto"
           value={this.props.formValues.precioProducto} />
 
-          <label className="etiqueta">Describe tu producto</label>
+          <label className="etiqueta">Escribe tu email</label>
           <input
           onChange={this.props.onChange}  
-          className="formSpaceDescription" 
-          type="text" 
+          className="formSpace" 
+          type="email" 
+          name="email" 
+          placeholder="E-mail"
+          value={this.props.formValues.email} />
+
+          <label className="etiqueta">Describe tu producto</label>
+          <textarea
+          onChange={this.props.onChange}  
+          className="formSpaceDescription"  
           name="descripcionProducto" 
           placeholder="Describe el producto"
           value={this.props.formValues.descripcionProducto} />
 
-          <p>*Menciona 3 palabras que describan tu producto separadas con (,)</p>
+          <p>*Describe brevemente tu producto.</p>
 
           <button onClick={this.handleClick} className="submit" type="botton">ENVIAR</button>
+
+          {this.props.error && <p>{this.props.error.message}</p>}
         </form>
       </div>
     );

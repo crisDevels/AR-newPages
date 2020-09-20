@@ -7,17 +7,17 @@ function createBadges(limit = 50) {
   const result = [];
 
   for (let i = 0; i < limit; i++) {
-    const firstName = faker.name.firstName();
-    const lastName = faker.name.lastName();
+    const nombreMarca = faker.name.nombreMarca();
+    const nombreProducto = faker.name.nombreProducto();
     const email = faker.internet.email();
 
     result.push({
       id: faker.random.uuid(),
-      firstName,
-      lastName,
+      nombreMarca,
+      nombreProducto,
       email,
-      jobTitle: faker.name.jobTitle(),
-      twitter: `${firstName}${lastName}${faker.address.zipCode()}`,
+      descripcionProducto: faker.name.descripcionProducto(),
+      precioProducto: `${nombreMarca}${nombreProducto}${faker.address.zipCode()}`,
       avatarUrl: `https://www.gravatar.com/avatar/${md5(email)}?d=identicon`,
     });
   }

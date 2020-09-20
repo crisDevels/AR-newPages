@@ -26,13 +26,13 @@ class Badge extends React.Component {
     </div>
     <div className="navigator-page">
         <img className="icons" src={lock} width="15px" alt="icono de seguridad" />
-        <p>https://{this.props.marca}.com</p>
+        <p>https://{this.props.nombreMarca}.com</p>
         <img className="icons" src={next} width="20px" alt="icono de recargar" />
     </div>
     <div className="content-page">
             <div className="cabecera-menu">
                 <h1>
-                  {this.props.marca}
+                  {this.props.nombreMarca}
                 </h1>
                 <div className="space-cabecera"></div>
                 <img src={menu} width="30px" alt="icono del menu" />
@@ -59,7 +59,7 @@ class Badge extends React.Component {
             <div className="value-product">
                 <div className="precio">
                   <p><strong>$</strong></p>
-                  <p>{this.props.precio}</p>
+                  <p>{this.props.precioProducto}</p>
                 </div>
                 <input className="option" type="button" value="Comprar"></input>
                 <input className="option" type="button" value="VerAR"></input>
@@ -67,7 +67,7 @@ class Badge extends React.Component {
             <div className="attributes-product">
                 <h3>Description</h3>
                 <p> 
-                {this.props.description} 
+                {this.props.descripcionProducto} 
                 </p>
             </div>
 

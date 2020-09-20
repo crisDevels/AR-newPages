@@ -8,9 +8,13 @@
     border-radius: 30px;
 }
 
-.pageFriend img {
+.foto-avatar {
     width: 120px;
     border-radius: 50%;
+    margin: 0 40px 0 0;
+}
+
+.foto-container {
     margin: 0 40px 0 0;
 }
 

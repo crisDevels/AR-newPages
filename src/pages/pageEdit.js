@@ -12,24 +12,39 @@ import BadgeForm from '../components/BadgeForm'
 import PageLoading from "../components/PageLoading";
 
 
-class ArNew extends React.Component {
-    
+class PageEdit extends React.Component {
     state = {
-        form: {},
+        form: [],
     }
 
-   /*  componentDidMount () {
+    componentDidMount () {
 
-        firebase.database().ref('form').on('child_added', snapshot => {
+        this.fetchData()
+
+        /* firebase.database().ref('form').on('child_added', snapshot => {
             this.setState ({
                 form: this.state.form.concat(snapshot.val())
             })
         })
+ */
 
+    }
 
-    } */
+    fetchData = async e => {
+        this.setState({ loading: true, error: null })
+        
+        try {
+            const data = await api.Feed.read(
+                this.props.match.params.badgeId
+            )
 
-    handleChange = (e) => {
+            this.setState({ loading: false, form: data })
+        }catch (error) {
+            this.setState({ loading: false, error: error })
+        }
+    }
+
+    handleChange = e => {
         /* const nextForm = this.state.form
         nextForm[e.target.name] = e.target.value */
         this.setState ({
@@ -45,7 +60,7 @@ class ArNew extends React.Component {
         e.preventDefault()
         this.setState({ loading: true, error: null })
         try {
-          await api.Feed.create(this.state.form)
+          await api.Feed.update(this.props.match.params.badgeId, this.state.form)
           this.setState({ loading: false, error: null })
 
           this.props.history.push('/Feed')
@@ -86,7 +101,7 @@ class ArNew extends React.Component {
                             />
                         </div>
                         <div className="colForm">
-                            <h1>Mira tu página en realidad aumentada</h1>
+                            <h1>Edita la página de {this.state.form.nombreMarca}</h1>
                             <BadgeForm 
                                 onChange={this.handleChange}
                                 onSubmit={this.handleSubmit}
@@ -117,4 +132,4 @@ class ArNew extends React.Component {
     }
 }
 
-export default ArNew;
+export default PageEdit;
